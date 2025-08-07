@@ -4,11 +4,12 @@ services:
     env: docker
     plan: free
     docker:
-      image: roy777rajat/n8n:latest
+      buildContext: .
+      dockerfilePath: docker/images/n8n/Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: yourpassword
+        value: Password77&&
